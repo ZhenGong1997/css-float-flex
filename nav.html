@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .logo {
+        background: white;
+        display: inline-block;
+        float: left;
+
+        margin-left: 10px;
+      }
+      .logo > img {
+        height: 40px;
+        /*消除下面多余部分*/
+        vertical-align: top;
+      }
+      .nav {
+        float: right;
+        margin-left: 20px;
+      }
+      ul > li {
+        float: left;
+
+        padding: 4px 0.5em;
+        line-height: 32px;
+      }
+      ul {
+        display: inline-block;
+      }
+      header {
+        background-color: grey;
+        color: white;
+      }
+      .content {
+        width: 800px;
+        /*块级元素，固定width居中方法*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .content > aside {
+        width: 200px;
+        height: 300px;
+        float: left;
+        background: #999;
+      }
+      .content > main {
+        height: 300px;
+        width: 500px;
+        float: left;
+        background: #ccc;
+      }
+      .content > .ad {
+        width: 100px;
+        height: 300px;
+        float: left;
+        background-color: black;
+      }
+      .imageList {
+        outline: 1px solid red;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+      }
+      .imageList > .x > .image {
+        width: 191px;
+        height: 191px;
+        background: #000;
+        border: 1px solid blue;
+        float: left;
+        
+        margin-bottom: 10px;
+        margin-right: 12px;
+      }
+      /*抵消了最后一张图的margin-right：12px*/
+      .imageList > .x {
+        margin-right: -12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="clearfix">
+      <div class="logo">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0067/8795/6826/files/logo_clipped_rev_1_402a88e6-d460-47f9-b549-abfd93fdc42f_300x300.png?v=1600807444"
+          alt=""
+        />
+      </div>
+      <ul class="clearfix nav">
+        <li>首页</li>
+        <li>产品</li>
+        <li>项目</li>
+        <li>关于</li>
+      </ul>
+    </header>
+
+    <div class="content clearfix">
+      <aside>边侧导航</aside>
+      <main>产品内容</main>
+      <div class="ad">广告</div>
+    </div>
+    <div class="imageList">
+      <div class="x clearfix">
+        <!-- 4 images, 3 intervals. 4*191+3*12=800px -->
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+      </div>
+    </div>
+  </body>
+</html>
