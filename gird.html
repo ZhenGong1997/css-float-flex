@@ -4,8 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- 
+        grid-template-column: px/fr;
+        grid-template-row:;
+     -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-template-rows:1fr 1fr;
+            border: 1px red solid;
+            width:800px;
+            justify-content: space-between;
+            grid-gap:12px;
+            margin-bottom:50px;
+        }
+        .container > div{
+            border:1px solid black;
+        }
+        .image{
+            width:191px;
+            height:191px;
+            background:grey
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+    </div>
+
+    <!-- 
+        grid-template-areas;
+        grid-area
+        grid-gap
+    -->
+    <style>
+        .container2{
+            display:grid;
+            /* 100% viewport height */
+            height:100vh;
+            grid-template-rows:60px auto 60px;
+            grid-template-columns:100px auto 100px;
+            grid-template-areas:
+            "header header header"
+            "aside main ad"
+            /* name . (a never used name)so it will be blank */
+            ". footer footer";
+            grid-row-gap:5px;
+            margin-bottom:50px;
+        }
+        .container2 > * {
+            border:1px solid red;           
+        }
+        .container2 > header{
+            grid-area: header;
+        }
+        .container2 > aside{
+            grid-area:aside;
+        }
+        .container2 > main{
+            grid-area:main;
+        }
+        .container2 > .ad{
+            grid-area:ad;
+        }
+        .container2 > footer{
+            grid-area:footer;
+        }
+    </style>
+    <div class="container2">
+        <header>header</header>
+        <aside>aside</aside>
+        <main>main</main>
+        <div class="ad">ad</div>
+        <footer>footer</footer>
+    </div>
+
+    <style>
+        .demo{
+            display:grid;
+            grid-template-areas:
+                "big mid1"
+                "big mid2"
+                "sm1 mid2"
+                "sm2 mid3"
+                "sm3 mid3";
+            grid-template-rows: 240px repeat(4,120px);
+            grid-template-columns: 250px 250px;
+            border:1px solid red;
+        }
+        .demo > div {
+            border:1px solid red;
+        }
+        .demo > .images:first-child{
+            grid-area:big;
+        }
+        .demo > .images:nth-child(2){
+            grid-area:sm1;
+        }
+        .demo > .images:nth-child(3){
+            grid-area:sm2;
+        }
+        .demo > .images:nth-child(4){
+            grid-area:sm3;
+        }
+        .demo > .images:nth-child(5){
+            grid-area:mid1;
+        }
+        .demo > .images:nth-child(6){
+            grid-area:mid2;
+        }
+        .demo > .images:nth-child(7){
+            grid-area:mid3;
+        }
+    </style>
+
+    <div class="demo">
+        <div class="images bigImage"></div>
+        <div class="images smallImage"></div>
+        <div class="images smallImage"></div>
+        <div class="images smallImage"></div>
+        <div class="images mediumImage"></div>
+        <div class="images mediumImage"></div>
+        <div class="images mediumImage"></div>
+    </div>
 </body>
 </html>
