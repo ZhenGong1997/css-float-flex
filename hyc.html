@@ -1,116 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        margin-top: 30px;
+      }
+      .wrapper a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .wrapper a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .locations > ul,
+      li {
+        list-style-type: none;
+      }
+
+      @media only screen and (min-width: 750px) {
+        .locations {
+          max-width: 1200px;
+          display: flex;
+          justify-content: space-between;
+          margin: auto auto;
+          padding: 0 55px 55px 55px;
         }
-       
-        .locations>ul,li{list-style-type:none;}
-     
-        .locations{
-            max-width:1200px;
-            display:flex;
-            border:1px solid red;
-            justify-content:space-around;
-            margin:auto auto;
+      }
+
+      @media only screen and (max-width: 749px) {
+        .locations {
+          max-width: 1200px;
+          display: flex;
+          justify-content: space-between;
+          margin: auto;
+          padding: 0 20px 55px 20px;
         }
-        .list1,.list2,.list3,.list4,.list5{
-            border:1px solid green;
-            max-width:200px;
-        }
-    
-        .locationTitle{
-            border:1px solid blue;
-            text-align:center;
-            padding:20px;
-            max-width:1200px;
-            margin:auto auto;
-        }
-        
+      }
+      .list1,
+      .list2,
+      .list3,
+      .list4,
+      .list5 {
+        max-width: 200px;
+        color: #fff;
+      }
+      .list1 li {
+        padding-bottom: 8px;
+      }
+      .list2 li {
+        padding-bottom: 8px;
+      }
+      .list3 li {
+        padding-bottom: 8px;
+      }
+
+      .locationTitle {
+        max-width: 1200px;
+        margin: 10px auto 35px auto;
+        color: #fff;
+      }
+      .locationTitle h2 {
+        text-align: center;
+        font-size: 24px;
+      }
+      .locationTitle hr {
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
     </style>
-    <div class="locationTitle">
+    <div class="wrapper">
+      <div class="locationTitle">
         <h2>Locations</h2>
-    </div>
-    <div class="locations">
-        
-      <div class="list1">
+        <hr />
+      </div>
+      <div class="locations">
+        <div class="list1">
           <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-              <li>7</li>
-              <li>8</li>
-              <li>9</li>
-              <li>10</li>
+            <li><a href="">Ajax</a></li>
+            <li><a href="">Barrie</a></li>
+            <li><a href="">Bowmanvill</a></li>
+            <li><a href="">Brampton</a></li>
+            <li><a href="">Burlington</a></li>
+            <li></li>
+            <li><a href="">Calgary</a></li>
+            <li><a href="">Cambridge</a></li>
+            <li><a href="">Guelph</a></li>
+            <li><a href="">Halifax</a></li>
+            <li><a href="">Hamilton</a></li>
           </ul>
-      </div>
-      <div class="list2">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-        </ul>
-      </div>
-      <div class="list3">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-        </ul>
-      </div>
-      <div class="list4">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-        </ul>
-      </div>
-      <div class="list5">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-        </ul>
+        </div>
+        <div class="list2">
+          <ul>
+            <li><a href="">Kinston</a></li>
+            <li><a href="">Kitchener</a></li>
+            <li><a href="">Longdon</a></li>
+            <li><a href="">Markham</a></li>
+            <li><a href="">Mississauga</a></li>
+            <li></li>
+            <li><a href="">Montreal</a></li>
+            <li><a href="">New Market</a></li>
+            <li><a href="">Niagara Falls</a></li>
+            <li><a href="">North Bay</a></li>
+            <li><a href="">Ontario</a></li>
+          </ul>
+        </div>
+        <div class="list3">
+          <ul>
+            <li><a href="">Orilla</a></li>
+            <li><a href="">Ottawa</a></li>
+            <li><a href="">Peterborough</a></li>
+            <li><a href="">Pickering</a></li>
+            <li><a href="">Quebec</a></li>
+            <li></li>
+            <li><a href="">Richmondhill</a></li>
+            <li><a href="">Toronto</a></li>
+            <li><a href="">Vancouver</a></li>
+            <li><a href="">Vaughan</a></li>
+            <li><a href="">Waterloo</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-</body>
+  </body>
 </html>
